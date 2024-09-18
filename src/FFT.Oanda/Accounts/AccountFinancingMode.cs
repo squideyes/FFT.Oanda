@@ -25,4 +25,11 @@ public enum AccountFinancingMode
   /// Account daily at 5pm New York time.
   /// </summary>
   DAILY,
+
+  // Observed in the wild but not reflected by the OANDA docs
+  // Not sure if these are replacements values or additions but 
+  // whatever the case, the change was needed to prevent 
+  // transaction serilization errors
+  DAILY_COMPONENT,
+  SECOND_BY_SECOND_COMPONENT
 }
